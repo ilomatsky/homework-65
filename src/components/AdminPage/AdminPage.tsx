@@ -31,8 +31,8 @@ const AdminPage = () => {
   };
 
   return (
-    <div>
-      <h1>Admin Page</h1>
+    <div className="admin-page">
+      <h1>Admin page</h1>
       <select onChange={(e) => setSelectedPage(e.target.value)}>
         <option value="">Select a page to edit</option>
         {pagesNames.map((page) => (

@@ -19,9 +19,15 @@ const Page = () => {
     fetchContent();
   }, [pageName]);
 
+  const capitalizeFirstLetter = (string: string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const formattedPageName = pageName ? capitalizeFirstLetter(pageName) : '';
+
   return (
     <div>
-      <h1>{pageName}</h1>
+      <h1>{formattedPageName}</h1>
       <p>{content}</p>
     </div>
   );

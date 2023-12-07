@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {pagesNames} from '../pages-names';
 
 const Navigation = () => (
@@ -6,11 +6,11 @@ const Navigation = () => (
     <ul>
       {pagesNames.map((page) => (
         <li key={page.id}>
-          <Link to={`/pages/${page.id}`}>{page.title}</Link>
+          <NavLink className="nav-link" to={`/pages/${page.id}`}>{page.title}</NavLink>
         </li>
       ))}
       <li>
-        <Link to="/pages/admin">Admin</Link>
+        <NavLink className="nav-link" to="/pages/admin">Admin</NavLink>
       </li>
     </ul>
   </nav>
